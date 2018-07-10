@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>themeplate</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="../img/tree.jpg">
+    <script src="js.js"></script>
+</head>
+<body>
+        <div class="header">
+         <div class="top-line">
+            <div class="logo">
+                <img src="../img/tree.jpg" alt="logo">
+            </div>
+            
+            <div class="menu-ic" onclick="myFunction(this)">
+                <div class="bar m1"></div>
+                <div class="bar m2"></div>
+                <div class="bar m3"></div>
+            </div>
+        </div>
+        
+        
+        <div class="main-menu">
+            <a href="../index.html" id="first">Home</a>
+            <a href="../p1/index.html">first</a>
+            <a href="#">second</a>
+            <a href="../p3/index.html" id="last">third</a>
+        </div>
+         <div class="header-content content-center">
+             <div class="head-name">
+                 <h2>Робототехніка</h2>
+             </div>
+             <div class="head-caption">
+                 <span><em>Мета робототехніки — виробляти програмування задля контрольованої співпраці електроніки і механіки роботів.</em></span>
+             </div>
+             
+         </div>
+</div>
+      
+      
+      
+      
+      
+      
+      
+        <div class="wrap-hov">
+           <div class="h-line">
+               <div class="blok-line"></div>
+           </div>
+           
+        <div class="wrap-h">
+           <div class="top-h">
+                 <img src="img/h.jpg" alt="park-image">
+                 <div class="text-h">
+                     <h1>Англійський парк і дизайн ландшафту</h1>
+                     <div class="line"></div>
+                     <h3>
+Парк в англійському стилі здійснив перехід від симетричних композицій до вільної, нерегулярної плануванні, що відтворює або імітує природний ландшафт.
+                </h3>
+                 </div>
+             </div>
+             <div class="bottom-h">
+                 <div class="left common">
+                     <strong>
+                         До традиційних елементів англійського парку відносять:
+                     </strong>
+                     <ul>
+                         <li>Відтворені класичні будівлі;</li>
+                         <li>Водойми;</li>
+                         <li>Руїни;</li>
+                         <li>Містки;</li>
+                         <li>Лавки;</li>
+                         <li>Підпірні стінки з каменю і цегли;</li>
+                         <li>Декоративну обробку натуральним каменем;</li>
+                         <li>Мощення доріжок гравієм;</li>
+                         <li>Включення в оформлення античних скульптур.</li>
+                     </ul>
+                 </div>
+                 <div class="common">
+                     <strong>
+                        Загальна характеристика особливостей дизайну ландшафту англійського парку:
+                     </strong>
+                     <ul>
+                         <li>Озеро є традиційним елементом саду і має, як правило, штучне походження. Його форма максимально імітує природні обриси. Краї озера - звивисті і нерегулярні. Уздовж берегів, близько до крайки води, висаджуються дерева;</li>
+                         <li>Лужки влаштовуються з урахуванням можливостей ландшафту. Вони вносять різноманітність і візуально розширюють простір;</li>
+                         <li>Гаї облаштовуються уздовж маршруту руху в парку. При зміні руху влаштовуються відкриваються види на галявини, обрамлені наступними групами дерев;</li>
+                        
+                     </ul>
+                 </div>
+             </div>
+           
+           
+           
+           
+        </div>
+        </div>
+         
+         
+        
+        
+        
+<!--     ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss   -->
+<div class="bg-block">       
+    <div class="black-opacity"></div>
+        <div class="slideshow-container">
+        
+        <div class="mySlides fade">
+          <div class="text">
+              <h2>Факт 1</h2>
+              <strong>Англійський парк - одна з назв пейзажного парку.</strong>
+          </div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="text">
+                <h2>Факт 2</h2>
+              <strong>Англійським парком також називаються парки в різних містах світу:</strong>
+             <strong> 
+              <ol>
+                  <li>Англійський парк в Петергофі.</li>
+                  <li>Англійський парк в Женеві.</li>
+                  <li>Англійська сад в Мюнхені</li>
+              </ol></strong>
+          </div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+    </div>
+</div>
+         
+         
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+<div class="wrap-hod">
+       <div class="wrap-down">
+       <h2 id="photoes-h2">Трохи фотографій</h2>
+       <div class="line d"></div>
+       <h3 id="photoes-h3">головною метою при організації парку в англійському стилі є створення максимально комфортної обстановки для фізичного і душевного відпочинку.</h3>
+       
+       <div class="photoes-wrap">
+           <div class="left-photoes common-photoes">
+               <div class="img-p-l"><img src="img/left.jpg" alt="park"></div>
+               <p class="left-txt-p">
+                   Дизайн
+               </p>
+               <p class="left-txt-span">
+                    Нова ідеологія садів і пейзажних парків змінила погляди ландшафтних дизайнерів і садівників-любителів не тільки на принципи декоративного оформлення, але і на його зміст.
+               </p>
+           </div>
+           <div class="right-photoes common-photoes">
+               <div class="top-p com">
+                   <div class="img-p"><img src="img/right1.jpg" alt="park"></div>
+                   <div class="text-p">
+                       <p class="left-txt-p">
+                           Cтилістика
+                       </p>
+                       <p class="left-txt-span">
+                            Його стилістика бере свій початок в традиціях античності. 
+                       </p>
+                   </div>
+               </div>
+               
+                  
+                  
+              <div class="middle-p com">
+                   <div class="img-p"><img src="img/right2.jpg" alt="park"></div>
+                   <div class="text-p">
+                       <p class="left-txt-p">
+                           Поширення
+                       </p>
+                       <p class="left-txt-span">
+                           Поширення в вісімнадцятому столітті в Європі парків «в англійському стилі» значно змінило.
+                       </p>
+                   </div>
+               </div>
+               <div class="bottom-p com">
+                   <div class="img-p"><img src="img/right3.jpg" alt="park"></div>
+                   <div class="text-p">
+                       <p class="left-txt-p">
+                           Основа
+                       </p>
+                       <p class="left-txt-span">
+                           В його основі лежала любов до природному середовищі і відчуття гармонії з нею.
+                       </p>
+                   </div>
+               </div>
+           </div>
+       </div>
+       </div>
+</div>
+        
+  
+   
+      
+      
+      
+      
+      
+        
+        <footer class="footer-menu">
+              <div class="f-row">
+                  <div class="f-cont">
+                      <img src="../img/tree.jpg" alt="logo">
+                  </div>
+                  <div class="f-cont">
+                      <nav>
+                          <ul>
+                              <li class="menu-item"><a href="../index.html">Home</a></li>
+                              <li class="menu-item"><a href="#">first</a></li>
+                              <li class="menu-item"><a href="../p2/index.html">second</a></li>
+                              <li class="menu-item"><a href="../p3/index.html">third</a></li>
+                          </ul>
+                      </nav>
+                  </div>
+              </div>
+          </footer>
+          <footer class="footer-copyright-area">
+              <div class="footer-copyright-content">
+                  <div class="copyright-notice">
+                      
+                            © Copyright 2012 -&nbsp;
+                            <script>document.write(new Date().getFullYear());</script>
+                            &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;THEME BY 
+                            <a href="#">BOSS</a>
+                            &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;ALL RIGHTS RESERVED&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;POWERED BY 
+                            <a href="#">AMA BOSS's corppration</a>
+                      
+                  </div>
+                  
+              </div>
+          </footer>
+
+
+
+
+
+
+
+</body>
+</html>
