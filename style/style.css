@@ -447,6 +447,20 @@ a {
   -ms-transform: translate(-50%, -50%);
 }
 
+
+table {
+  font-family: sans-serif;
+  border-collapse: collapse;
+}
+
+td, th {
+  border: 1px solid #333;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #333;
+}
 /*======================================================================*/
 
 
